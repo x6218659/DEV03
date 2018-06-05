@@ -54,7 +54,10 @@ namespace ETHotfix
 				G2C_LoginGate g2CLoginGate = (G2C_LoginGate)await SessionComponent.Instance.Session.Call(new C2G_LoginGate() { Key = r2CLogin.Key });
                 UserInfo userInfor = (UserInfo)await SessionComponent.Instance.Session.Call(new UserInfor() { });
 
-				Log.Info("登陆gate成功!");
+                //加载心跳组件
+                Game.Scene.GetComponent<SessionComponent>().Session.AddComponent<HeartBeatComponent>();
+
+                Log.Info("登陆gate成功!");
                 Log.Info("请求信息gate成功!" + "  COIN:" + userInfor.Coin+"  EXP:"+userInfor.Exp);
                 // 创建Player
                 Player player = ETModel.ComponentFactory.CreateWithId<Player>(g2CLoginGate.PlayerId);
@@ -64,7 +67,7 @@ namespace ETHotfix
                 //Log.Info("Login Player.Unitid"+ player.UnitId.ToString());
                 //Log.Info("Login Player.id" + player.Id.ToString());
               
-                Game.Scene.GetComponent<UIComponent>().Create(UIType.UILobby);
+                Game.Scene.GetComponent<UIComponent>().Create(UIType.EvoUILobby);
 				Game.Scene.GetComponent<UIComponent>().Remove(UIType.UILogin);
 			}
 			catch (Exception e)

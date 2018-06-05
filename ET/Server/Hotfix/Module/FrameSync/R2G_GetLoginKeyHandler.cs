@@ -14,7 +14,11 @@ namespace ETHotfix
 				long key = RandomHelper.RandInt64();
 				Game.Scene.GetComponent<GateSessionKeyComponent>().Add(key, message.Account);
 				response.Key = key;
-				reply(response);
+
+                //添加心跳组件
+                session.AddComponent<HeartBeatComponent>().CurrentTime = TimeHelper.ClientNowSeconds();
+
+                reply(response);
 			}
 			catch (Exception e)
 			{

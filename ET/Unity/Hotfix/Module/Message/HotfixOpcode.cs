@@ -14,5 +14,7 @@ namespace ETHotfix
 		 public const ushort G2C_PlayerInfo = 10010;
 		 public const ushort UserInfor = 10011;
 		 public const ushort UserInfo = 10012;
+		 public const ushort C2R_HeartBeat = 10013;
+		 public const ushort R2C_HeartBeat = 10014;
 	}
 }

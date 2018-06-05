@@ -371,6 +371,9 @@
     <None Include="Assets\Res\Config\GlobalProto.txt" />
     <None Include="Assets\Res\Config\UnitConfig.txt" />
     <None Include="Assets\StreamingAssets\Version.txt" />
+    <None Include="Assets\WarFogView\Shaders\FogOfWarBlur.shader" />
+    <None Include="Assets\WarFogView\Shaders\FogOfWarEffect.shader" />
+    <None Include="Assets\WarFogView\Shaders\FogOfWarMinimap.shader" />
     <None Include="Assets\link.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

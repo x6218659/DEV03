@@ -64,6 +64,9 @@
     <Compile Include="Base\Object\IComponentSerialize.cs" />
     <Compile Include="Base\Object\IDestroySystem.cs" />
     <Compile Include="Base\Object\IStartSystem.cs" />
+    <Compile Include="Evo\Component\HeartBeatComponent.cs" />
+    <Compile Include="Evo\UI\UILobby\Component\EvoUILobbyComponent.cs" />
+    <Compile Include="Evo\UI\UILobby\Factory\EvoUILobbyFactory.cs" />
     <Compile Include="Module\FrameSync\Class1.cs" />
     <Compile Include="Module\FrameSync\OperaComponent.cs" />
     <Compile Include="Entity\Config\UnitConfig.cs" />

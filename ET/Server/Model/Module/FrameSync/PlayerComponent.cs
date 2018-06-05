@@ -11,12 +11,15 @@ namespace ETModel
 			self.Awake();
 		}
 	}
-	
-	public class PlayerComponent : Component
+
+
+
+    public class PlayerComponent : Component
 	{
 		public static PlayerComponent Instance { get; private set; }
 
 		public Player MyPlayer;
+
 		
 		private readonly Dictionary<long, Player> idPlayers = new Dictionary<long, Player>();
 
@@ -24,7 +27,10 @@ namespace ETModel
 		{
 			Instance = this;
 		}
-		
+
+       
+
+
 		public void Add(Player player)
 		{
 			this.idPlayers.Add(player.Id, player);

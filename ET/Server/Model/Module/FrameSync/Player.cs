@@ -15,6 +15,7 @@
 		
 		public long UnitId { get; set; }
 
+
 		public void Awake(string account)
 		{
 			this.Account = account;

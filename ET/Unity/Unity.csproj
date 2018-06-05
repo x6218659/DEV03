@@ -937,12 +937,34 @@
     <Compile Include="Assets\ThirdParty\Protobuf\protobuf-net\ServiceModel\XmlProtoSerializer.cs" />
     <Compile Include="Assets\ThirdParty\Protobuf\protobuf-net\SubItemToken.cs" />
     <Compile Include="Assets\ThirdParty\Protobuf\protobuf-net\WireType.cs" />
+    <Compile Include="Assets\WarFogView\FPSCounter.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\FOWMap.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\FOWMapData.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\FOWMaskTexture.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\FOWPregenerationMapData.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\FOWRenderer.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\FOWUtils.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\MaskCalcluater\CircularMask.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\MaskCalcluater\FOVAccurate.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\MaskCalcluater\FOVCalculator.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\MaskCalcluater\FOVSimple.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\Core\MaskCalcluater\MaskCalcluatorBase.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\FogOfWarEffect.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\FogOfWarExplorer.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\FogOfWar\FogOfWarStalker.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\Test\TestAI.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\Test\TestController.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\Test\TestMiniMap.cs" />
+    <Compile Include="Assets\WarFogView\Scripts\Test\TestPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Res\Config\BuffConfig.txt" />
     <None Include="Assets\Res\Config\GlobalProto.txt" />
     <None Include="Assets\Res\Config\UnitConfig.txt" />
     <None Include="Assets\StreamingAssets\Version.txt" />
+    <None Include="Assets\WarFogView\Shaders\FogOfWarBlur.shader" />
+    <None Include="Assets\WarFogView\Shaders\FogOfWarEffect.shader" />
+    <None Include="Assets\WarFogView\Shaders\FogOfWarMinimap.shader" />
     <None Include="Assets\link.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

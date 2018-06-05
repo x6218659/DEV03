@@ -59,3 +59,13 @@ message UserInfo // IResponse
 	required int64 Coin = 1;
 	required int64 Exp = 2;
 }
+
+message C2R_HeartBeat // IRequest
+{
+	required string Info = 1;
+}
+
+message R2C_HeartBeat // IResponse
+{
+	required string Info = 1;
+}
