@@ -122,6 +122,14 @@
       <Project>{cf118143-7e37-744f-be45-3f55345fec40}</Project>
       <Name>Unity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Unity.Editor.csproj">
+      <Project>{c17f48d3-964e-e97c-3d2e-966f7a6c6d93}</Project>
+      <Name>Unity.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Editor.Plugins.csproj">
+      <Project>{81a6e58e-bff2-f1c8-1c4e-6316985f642c}</Project>
+      <Name>Unity.Editor.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Unity.Plugins.csproj">
       <Project>{d1fdb199-0fb7-099d-3771-c6a942e4e326}</Project>
       <Name>Unity.Plugins</Name>

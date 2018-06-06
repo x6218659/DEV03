@@ -16,7 +16,10 @@ namespace ETHotfix
 				response.Key = key;
 
                 //添加心跳组件
-                session.AddComponent<HeartBeatComponent>().CurrentTime = TimeHelper.ClientNowSeconds();
+                if (session.GetComponent<HeartBeatComponent>()==null) {
+                    session.AddComponent<HeartBeatComponent>().CurrentTime = TimeHelper.ClientNowSeconds();
+                }
+               
 
                 reply(response);
 			}

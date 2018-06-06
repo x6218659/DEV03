@@ -71,6 +71,11 @@ namespace ETHotfix
                 Game.Scene.GetComponent<NetInnerComponent>().Remove(this.Parent.InstanceId);
                 Game.Scene.GetComponent<GateSessionKeyComponent>().Remove(this.Parent.InstanceId);
                 this.Dispose();
+                if (this.Entity.GetComponent<Session>()!= null) {
+                    this.Entity.GetComponent<Session>().Dispose();
+                }
+              
+                
             }
             //每次检测Session
 

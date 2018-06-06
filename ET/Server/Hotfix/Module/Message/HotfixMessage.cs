@@ -182,9 +182,6 @@ namespace ETHotfix
 		[ProtoMember(90, IsRequired = true)]
 		public int RpcId { get; set; }
 
-		[ProtoMember(1, IsRequired = true)]
-		public string Info;
-
 	}
 
 	[Message(HotfixOpcode.R2C_HeartBeat)]
@@ -199,9 +196,6 @@ namespace ETHotfix
 
 		[ProtoMember(92, IsRequired = true)]
 		public string Message { get; set; }
-
-		[ProtoMember(1, IsRequired = true)]
-		public string Info;
 
 	}
 

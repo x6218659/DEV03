@@ -13,7 +13,7 @@ namespace ETHotfix
     {
         public override void Update(HeartBeatComponent self)
         {
-            self?.Update();  
+            self.Update();  
         }
     }
     /// <summary>
@@ -39,7 +39,7 @@ namespace ETHotfix
             try
             {
                 R2C_HeartBeat result = (R2C_HeartBeat)await this.GetParent<Session>().Call(new C2R_HeartBeat());
-                //this.GetParent<Session>().c(new C2R_HeartBeat());
+               // this.GetParent<Session>().Send(new C2R_HeartBeat());
             }
             catch
             {

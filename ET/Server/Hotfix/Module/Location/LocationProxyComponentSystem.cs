@@ -48,8 +48,11 @@ namespace ETHotfix
 
 		public static async Task<long> Get(this LocationProxyComponent self, long key)
 		{
+
 			Session session = Game.Scene.GetComponent<NetInnerComponent>().Get(self.LocationAddress);
 			ObjectGetResponse response = (ObjectGetResponse)await session.Call(new ObjectGetRequest() { Key = key });
+
+            Log.Info("到达");
 			return response.InstanceId;
 		}
 	}

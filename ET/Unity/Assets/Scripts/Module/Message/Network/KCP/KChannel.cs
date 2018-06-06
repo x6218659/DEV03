@@ -279,8 +279,12 @@ namespace ETModel
 		{
 			if (this.IsDisposed)
 			{
-				throw new Exception("TChannel已经被Dispose, 不能接收消息");
-			}
+                //断线操作
+                ///TODO
+                Log.Warning("TChannel已经被Dispose, 不能接收消息");
+                //throw new Exception("session已经被Dispose了");
+                // throw new Exception("TChannel已经被Dispose, 不能接收消息");
+            }
 
 			try
 			{

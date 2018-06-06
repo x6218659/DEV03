@@ -21,7 +21,7 @@ namespace ETHotfix
 				response.Count = Game.Scene.GetComponent<UnitComponent>().Count;
 				reply(response);
 
-				if (response.Count == 1)
+				if (response.Count >0)
 				{
 					Actor_CreateUnits actorCreateUnits = new Actor_CreateUnits();
 					Unit[] units = Game.Scene.GetComponent<UnitComponent>().GetAll();

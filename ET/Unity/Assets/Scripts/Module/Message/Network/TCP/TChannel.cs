@@ -91,8 +91,12 @@ namespace ETModel
 		{
 			if (this.IsDisposed)
 			{
-				throw new Exception("TChannel已经被Dispose, 不能发送消息");
-			}
+                //断线操作
+                ///TODO
+                Log.Warning("TChannel已经被Dispose, 不能发送消息");
+                //throw new Exception("session已经被Dispose了");
+                //  throw new Exception("TChannel已经被Dispose, 不能发送消息");
+            }
 			byte[] size = BitConverter.GetBytes((ushort)buffer.Length);
 			this.sendBuffer.Write(size, 0, size.Length);
 			this.sendBuffer.Write(buffer, index, length);
@@ -106,8 +110,12 @@ namespace ETModel
 		{
 			if (this.IsDisposed)
 			{
-				throw new Exception("TChannel已经被Dispose, 不能发送消息");
-			}
+                //断线操作
+                ///TODO
+                Log.Warning("TChannel已经被Dispose, 不能发送消息");
+                //throw new Exception("session已经被Dispose了");
+                //throw new Exception("TChannel已经被Dispose, 不能发送消息");
+            }
 			ushort size = (ushort)buffers.Select(b => b.Length).Sum();
 			byte[] sizeBuffer = BitConverter.GetBytes(size);
 			this.sendBuffer.Write(sizeBuffer, 0, sizeBuffer.Length);
@@ -248,8 +256,12 @@ namespace ETModel
 		{
 			if (this.IsDisposed)
 			{
-				throw new Exception("TChannel已经被Dispose, 不能接收消息");
-			}
+                //断线操作
+                ///TODO
+                Log.Warning("TChannel已经被Dispose, 不能接收消息");
+                //throw new Exception("session已经被Dispose了");
+                // throw new Exception("TChannel已经被Dispose, 不能接收消息");
+            }
 
 			try
 			{

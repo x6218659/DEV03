@@ -248,10 +248,13 @@ namespace ETModel
 		{
 			if (this.IsDisposed)
 			{
-				throw new Exception("session已经被Dispose了");
-			}
+                //断线操作
+                ///TODO
+                Log.Warning("session已经被Dispose了");
+                //throw new Exception("session已经被Dispose了");
+            }
 
-			this.Send(0x01, message);
+            this.Send(0x01, message);
 		}
 
 		public void Send(byte flag, IMessage message)
@@ -267,8 +270,11 @@ namespace ETModel
 		{
 			if (this.IsDisposed)
 			{
-				throw new Exception("session已经被Dispose了");
-			}
+                //断线操作
+                ///TODO
+                Log.Warning("session已经被Dispose了");
+                //throw new Exception("session已经被Dispose了");
+            }
 			this.byteses[0][0] = flag;
 			this.byteses[1] = BitConverter.GetBytes(opcode);
 			this.byteses[2] = bytes;

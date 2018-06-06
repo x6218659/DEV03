@@ -62,10 +62,10 @@ message UserInfo // IResponse
 
 message C2R_HeartBeat // IRequest
 {
-	required string Info = 1;
+
 }
 
 message R2C_HeartBeat // IResponse
 {
-	required string Info = 1;
+
 }

@@ -23,6 +23,8 @@ namespace ETHotfix
 				{
 					continue;
 				}
+
+
 				Unit unit = UnitFactory.Create(unitInfo.UnitId);
         
                 unit.Position = new Vector3(unitInfo.X / 1000f, 0, unitInfo.Z / 1000f);
@@ -38,8 +40,13 @@ namespace ETHotfix
     //                //unit.GameObject.AddComponent<Rigidbody>();
     //            }
 			}
-            Game.Scene.AddComponent<ClassComponent>();
-            Game.Scene.AddComponent<OperaComponent>();
+            if (Game.Scene.GetComponent<ClassComponent>()==null) {
+                Game.Scene.AddComponent<ClassComponent>();
+            }
+            if (Game.Scene.GetComponent<OperaComponent>() == null)
+            {
+                Game.Scene.AddComponent<OperaComponent>();
+            }
 		}
 	}
 }
